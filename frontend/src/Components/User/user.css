@@ -1,0 +1,198 @@
+.head {
+    height: 6rem;
+    font-family: 'Poppins';
+  }
+  
+  .ServiceList {
+    background-color: black;
+    min-height: 20rem;
+    width: 100%;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2rem;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    
+  }
+  
+  .services {
+    background-color: rgb(255, 255, 255);
+    height: 16rem;
+    width: calc(30.33% - 1rem); /* Adjusted width to accommodate three items with spacing between them */
+    border-radius: 1rem;
+    margin-bottom: 2rem; /* Add margin between items */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+  .services h3{
+    font-size: 22px;
+    
+}
+
+.services button{
+    width: 10rem;
+    height: 2rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 0.7rem;
+    background-color: #8af37f;
+    cursor: pointer;
+}
+
+/* Footer */
+
+/* .FooterArea{
+    width: 100%;
+    height: 9rem;
+    background-color: #8af37f;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+.FooterArea h3{
+    font-size: 1rem;
+    font-family: 'Poppins';
+    margin-top: 1rem;
+} */
+
+.FooterArea {
+    width: 100%;
+    height: 9rem;
+    background-color: #8af37f;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .FooterArea h3 {
+    font-size: 1rem;
+    font-family: 'Poppins';
+    margin-bottom: 1rem;
+  }
+  
+  .socialIcons {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .socialIcons a,
+  .socialIcons button {
+    color: #333; /* Adjust the color as needed */
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .socialIcons a:hover,
+  .socialIcons button:hover {
+    color: #fff; /* Adjust the color as needed */
+  }
+  
+ /* search bar */
+ .searchBar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .searchBar .form-control {
+    margin-right: 10px;
+  }
+
+ 
+/* ------------------mobileview---------------- */
+  
+  @media screen and (max-width: 768px) {
+    /* Mobile View Styles */
+    .head {
+      height: 4rem; /* Adjust the height for mobile view */
+      text-align: center; /* Center text for mobile view */
+    }
+
+    .headText {
+        font-size: 16px !important;
+      }
+  
+  
+    .ServiceList {
+      height: auto;
+      border-radius: 12px;
+      justify-content: space-evenly; /* Center items on mobile view */
+      height: auto;
+      border-radius: 12px;
+      justify-content: space-evenly;
+    }
+
+  
+    .services {
+      width: calc(50% - 1rem); /* Adjusted width to accommodate two items in a row with spacing between them */
+      margin-bottom: 2rem; /* Add margin between items on mobile view */
+      height: 8rem;
+      font-family: 'Poppins';
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .services h3{
+        font-size: 14px;
+        
+    }
+
+    .services button{
+        width: 6rem;
+        margin-top: 1rem;
+        border: none;
+        border-radius: 0.7rem;
+        background-color: #8af37f;
+        cursor: pointer;
+    }
+
+
+    .FooterArea{
+        width: 100%;
+        height: 9rem;
+        background-color: #8af37f;
+        margin-top: 2rem;
+        border-radius: 1rem;
+    }
+
+    .FooterArea h3{
+        font-size: 14px;
+    }
+
+    .socialIcons{
+        font-size: 1.3rem;
+    }
+
+
+    .searchBar {
+        display: flex;
+        align-items: center;
+        width: 13rem;
+      }
+
+      .searchBar button{
+        font-size: 11px;
+        width: 4rem;
+      }
+
+      .searchBar input{
+        font-size: 11px;
+      }
+
+  }
+  
