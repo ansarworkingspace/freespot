@@ -19,6 +19,7 @@
   
   
   .services {
+    position: relative;
     background-color: rgb(255, 255, 255);
     border: 1px solid;
     height: 16rem;
@@ -30,10 +31,32 @@
     justify-content: center;
     align-items: center;
     opacity: 0; /* Start with 0 opacity */
-  transition: opacity 0.8s ease-in-out;
+    transition: opacity 0.8s ease-in-out, box-shadow 0.3s ease-in-out;
   background: url('https://i.pinimg.com/564x/2d/41/ae/2d41aeee54b913eda409d93e49e00f1f.jpg') center/cover;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   font-family: 'Poppins';
+}
+
+.services:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Adjust box shadow on hover */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1); /* Light black overlay color */
+  border-radius: 1rem;
+  display: none;
+  transition: opacity 0.3s ease-in-out; /* Adjust the transition duration */
+}
+
+.services:hover .overlay {
+  display: block;
+  box-shadow: 0px 4px 8px #8af37f;
+  
 }
 
   .services.show {
@@ -47,7 +70,7 @@
 
   .services h3{
     font-size: 22px;
-    
+    z-index: 1;
 }
 
 .services button{
@@ -58,6 +81,7 @@
     border-radius: 0.7rem;
     background-color: #8af37f;
     cursor: pointer;
+    z-index: 1;
 }
 
 
@@ -111,6 +135,38 @@
     margin-right: 10px;
   }
 
+
+.welcomeText{
+  width: 100%;
+  /* background-color: #8af37f; */
+  height: 12rem;
+  font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcomeText h2{
+  font-size: 2.1rem;
+}
+
+
+.typed-cursor {
+  opacity: 0;
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
  
 /* ------------------mobileview---------------- */
   
@@ -192,6 +248,26 @@
 
       .searchBar input{
         font-size: 11px;
+      }
+
+      .welcomeText{
+        width: 100%;
+        /* background-color: #8af37f; */
+        height: 7rem;
+        font-family: "Poppins";
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .welcomeText h2{
+        font-size: 1.1rem;
+      }
+
+      .welcomeText p{
+        font-size: 12px;
       }
 
   }

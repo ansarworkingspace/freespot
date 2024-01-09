@@ -30,6 +30,7 @@ useEffect(() => {
     <div className={`ServiceList ${isLoaded ? 'show' : ''}`}>
       {services.map((service) => (
         <div className={`services ${isLoaded ? 'show' : ''}`} key={service.id}>
+          <div className="overlay"></div>
           <h3>{service.serviceName}</h3>
           <button onClick={() => clickServices(service.id)}>Click</button>
         </div>
