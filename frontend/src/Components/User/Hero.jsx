@@ -1,5 +1,5 @@
 import './user.css'
-
+import React,{useState,useEffect} from 'react';
 
 
 const Hero = () => {
@@ -16,10 +16,20 @@ const clickServices = (id)=>{
 }
 
 
+
+const [isLoaded, setIsLoaded] = useState(false);
+
+useEffect(() => {
+  // Trigger the animation after the component has mounted
+  setIsLoaded(true);
+}, []);
+
+
+
   return (
-    <div className='ServiceList'>
+    <div className={`ServiceList ${isLoaded ? 'show' : ''}`}>
       {services.map((service) => (
-        <div className='services' key={service.id}>
+        <div className={`services ${isLoaded ? 'show' : ''}`} key={service.id}>
           <h3>{service.serviceName}</h3>
           <button onClick={() => clickServices(service.id)}>Click</button>
         </div>

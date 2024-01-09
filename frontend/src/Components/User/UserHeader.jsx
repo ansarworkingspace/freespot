@@ -5,8 +5,8 @@ import './user.css'
 
 const Header = () => {
   return (
-    <header >
-      <Navbar className='head' bg='dark' variant='dark' expand='lg' collapseOnSelect>
+    <header  >
+      <Navbar className='head'  bg='dark' variant='dark' expand='lg' collapseOnSelect>
         <Container >
           <Navbar.Brand  href='/' className='headText'>freespot</Navbar.Brand>
          
