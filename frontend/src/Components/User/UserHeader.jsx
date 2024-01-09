@@ -1,5 +1,5 @@
 import { Navbar, Nav, Container, Form, FormControl, Button }  from 'react-bootstrap';
-import { FaSignInAlt, FaSignOutAlt } from 'react-icons/fa';
+
 import './user.css'
 
 

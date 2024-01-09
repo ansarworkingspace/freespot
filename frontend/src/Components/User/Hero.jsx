@@ -1,5 +1,7 @@
 import './user.css'
 import React,{useState,useEffect} from 'react';
+import JpegToPng from './Services/JpegToPng';
+import ImgToPdf from './Services/ImgToPdf';
 
 
 const Hero = () => {
@@ -11,13 +13,17 @@ const Hero = () => {
   ];
 
 
-const clickServices = (id)=>{
-   console.log(id)
-}
-
-
 
 const [isLoaded, setIsLoaded] = useState(false);
+const [selectedService, setSelectedService] = useState(0);
+
+
+
+const clickServices = (id) => {
+  setSelectedService(id);
+};
+
+
 
 useEffect(() => {
   // Trigger the animation after the component has mounted
@@ -27,6 +33,12 @@ useEffect(() => {
 
 
   return (
+    <>
+
+
+    {selectedService === 1 && <ImgToPdf />}
+    {selectedService === 3 && <JpegToPng />}
+    
     <div className={`ServiceList ${isLoaded ? 'show' : ''}`}>
       {services.map((service) => (
         <div className={`services ${isLoaded ? 'show' : ''}`} key={service.id}>
@@ -36,6 +48,12 @@ useEffect(() => {
         </div>
       ))}
     </div>
+    
+
+
+
+    </>
+    
   );
 };
 

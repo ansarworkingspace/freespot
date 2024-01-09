@@ -146,7 +146,11 @@
   margin-top: 1rem;
   justify-content: center;
   align-items: center;
+
 }
+
+
+
 
 .welcomeText h2{
   font-size: 2.1rem;
@@ -168,6 +172,13 @@
   }
 }
  
+
+
+
+
+
+
+
 /* ------------------mobileview---------------- */
   
   @media screen and (max-width: 768px) {

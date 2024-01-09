@@ -24,9 +24,11 @@ const MainCom = () => {
   }, []);
 
   return (
+    
     <div className='welcomeText'>
       <h2 className='typed-text'></h2>
       <p>You can access 👀 any services. It's completely free 🚀</p>
+      
     </div>
   );
 };
